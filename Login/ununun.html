@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>SIGN UP</title>
+</head>
+<body>
+    <?php
+        $host="localhost";
+        $dbuser="root";
+        $pass="KKK1998*";
+        $dbname="registration";
+        $conn=mysqli_connect($host,$dbuser,$pass,$dbname);
+        $comp=$_POST['comp'];
+        $regid=$_POST['regid'];
+        $dept=$_POST['dept'];
+        $block=$_POST['block'];
+        $room=$_POST['room'];
+        $sql="insert into hostel(regid,comp,dept,block,room_no)"."values('$regid','$comp','$dept','$block','$room')";
+        $repasses=mysqli_query($conn,$sql);
+    ?>
+COMPLAIN REGISTERED!
+
+
+
+
+<?php
+if(isset($_POST['Submit']))
+{
+        $host="localhost";
+        $dbuser="root";
+        $pass="KKK1998*";
+        $dbname="registration";
+        $conn=mysqli_connect($host,$dbuser,$pass,$dbname);
+        $comp=$_POST['comp'];
+        $regid=$_POST['regid'];
+        $dept=$_POST['dept'];
+        $block=$_POST['block'];
+        $room=$_POST['room'];
+        $sql="insert into hostel(regid,comp,dept,block,room_no)"."values('$regid','$comp','$dept','$block','$room')";
+        $repasses=mysqli_query($conn,$sql);
+}?>
+
+
+
+
+
+
+
+
+
+
+
+
+        while($row = mysqli_fetch_assoc($row1)) {
+        echo $row["dept"]."   :  ".$row["room_no"]."   :  ".$row["comp"]."<br>";
+    }
